@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de Inglés</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6a0dad;
+            color: white;
+            overflow-x: hidden; /* Evitar scroll horizontal */
+        }
+
+        /* Fondo en movimiento */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #6a0dad, #9c27b0, #b388ff);
+            background-size: 300% 300%;
+            z-index: -1;
+            animation: movimientoFondo 10s ease infinite;
+        }
+
+        @keyframes movimientoFondo {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Estilos del encabezado */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Texto en movimiento */
+        .texto-en-movimiento {
+            font-size: 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: scroll 10s linear infinite;
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Estilos de las secciones */
+        main {
+            padding: 10px;
+            text-align: center;
+            max-width: 800px; /* Limitar el ancho */
+            margin: 0 auto; /* Centrar el contenido */
+            position: relative; /* Para colocar el contenido sobre el fondo */
+            z-index: 1; /* Asegurarse de que el contenido esté por encima del fondo */
+        }
+
+        .introduccion, .clases, .precauciones, .video-referencia {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo más oscuro para mayor contraste */
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Imágenes pequeñas */
+        .imagen-explicativa {
+            width: 100px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 5px 0;
+            margin-top: 20px;
+        }
+
+        /* Estilos del botón de clase VIP */
+        .clase-vip {
+            margin-top: 20px;
+        }
+
+        .clase-vip button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .clase-vip button:hover {
+            background-color: #45a049; /* Verde más oscuro */
+        }
+
+        /* Estilos del enlace de YouTube */
+        .youtube-link {
+            margin-top: 10px;
+            display: block;
+            color: #ff0000;
+            font-size: 1.2rem;
+        }
+
+        /* Estilos para el iframe del video */
+        .video-referencia iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        /* Estilos de las secciones de clases */
+        .clases {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .clase {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .clase img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clases de Inglés Efectivas</h1>
+    </header>
+
+    <div class="texto-en-movimiento">
+        Aprende inglés con nuestros métodos interactivos y personalizados.
+    </div>
+    
+    <main>
+        <section class="introduccion">
+            <h2>¿Por qué estudiar inglés?</h2>
+            <p>El inglés es una de las lenguas más habladas y útiles a nivel mundial. Dominarlo te abre puertas tanto a nivel personal como profesional. Nuestras clases te ayudarán a aprender de forma rápida y efectiva.</p>
+            <img src="https://images.pexels.com/photos/4386388/pexels-photo-4386388.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=100&amp;w=100" alt="Clases de Inglés" class="imagen-explicativa">
+        </section>
+
+        <section class="clases">
+            <div class="clase">
+                <h3>Clases Interactivas</h3>
+                <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100" alt="Clases Interactivas">
+                <p>Nuestras clases incluyen actividades dinámicas y herramientas digitales para un aprendizaje efectivo.</p>
+            </div>
+            <div class="clase">
+                <h3>Enseñanza Personalizada</h3>
+                <img src="https://images.pexels.com/photos/3184312/pexels-photo-3184312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100" alt="Enseñanza Personalizada">
+                <p>Adaptamos nuestras clases a tu nivel y ritmo para garantizar un progreso continuo.</p>
+            </div>
+            <div class="clase">
+                <h3>Profesores Expertos</h3>
+                <img src="https://images.pexels.com/photos/3184320/pexels-photo-3184320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100" alt="Profesores Expertos">
+                <p>Contamos con profesores nativos y certificados que te guiarán en cada paso del aprendizaje.</p>
+            </div>
+        </section>
+
+        <section class="precauciones">
+            <h2>Beneficios del Inglés</h2>
+            <p>El dominio del inglés puede brindarte acceso a oportunidades laborales internacionales, mayor acceso a información y una mejor comprensión de la cultura global.</p>
+            <img src="https://images.pexels.com/photos/1181674/pexels-photo-1181674.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=100&amp;w=100" alt="Beneficios del inglés" class="imagen-explicativa">
+        </section>
+
+        <div class="clase-vip">
+            <button onclick="window.location.href='https://hotmart.com/es/marketplace/productos/desafio-bilinguee-reto-de-3-dias/R93612299K?ref=Y93627701Y'">
+                ¿Quieres una clase ONLINE VIP?
+            </button>
+        </div>
+
+        <section class="video-referencia">
+            <h2>Mira este video de referencia</h2>
+            <iframe src="https://www.youtube.com/embed/b2pAPT6caWM" title="Video de referencia" allowfullscreen></iframe>
+            <a href="https://www.youtube.com" target="_blank" class="youtube-link">Visita nuestro canal de YouTube</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Clases de Inglés Efectivas</p>
+    </footer>
+</body>
+</html>
